@@ -144,8 +144,12 @@ def files():
 #    s3_resource = boto3.resource('s3')
 #    my_bucket = s3_resource.Bucket(BUCKET_NAME)
 #    result = my_bucket.objects.filter(Prefix=FILTER)
-     result = list_files()
-     return render_template('report.html', files=result)
+     if session['username'] == 'admin':
+        result = list_admin_files()
+        return render_template('report.html', files=result)
+     else:
+        result = list_files()
+        return render_template('report.html', files=result)
 
 @application.route('/uploadfile', methods=["POST"])
 @login_required
@@ -211,6 +215,12 @@ def list_files():
     result = my_bucket.objects.filter(Prefix=FILTER)
     return result
 
+def list_admin_files():
+    s3 = boto3.client("s3",aws_access_key_id=AWS_ACCESS_KEY_ID,aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+    s3_resource = boto3.resource('s3')
+    my_bucket = s3_resource.Bucket(BUCKET_NAME)
+    result = my_bucket.objects.filter()
+    return result
 ####################################### S3 Bucket code upload and download begin here ######################################
 
 
