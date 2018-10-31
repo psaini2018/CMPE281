@@ -9,8 +9,9 @@
                       <th class="text-center" width="115px">Sno</th>
                       <th class="text-center" width="115px">Name</th>
                       <th class="text-center" width="115px">Creation Date</th>
-                       <th class="text-center" width="115px">Last Modified</th>  
+                      <th class="text-center" width="115px">Last Modified</th>  
                       <th class="text-center" width="115px">Download</th>
+                      <th class="text-center" width="115px">Delete</th> 
                   </tr>
               </thead>   
           <tbody> 
@@ -21,8 +22,8 @@
                     <td class="text-center" width="150px"> {{ f['filename'] }} </td>
                     <td class="text-center" width="150px"> {{ f['creationdate']  }} </span></td>
                     <td class="text-center" width="150px"> {{ f['last_modified']  }} </span></td>
-                    <td class="text-center" width="150px"> <a href="{{ url_for('downloadfile', keyname=f['filename']) }}"> <button class="btn btn-primary center-block">  Download  </span> </button> </a> </td>
-                    <td class="text-center" width="150px"> <a href="{{ url_for('deletefile', keyname=f['filename']) }}"> <button class="btn btn-primary center-block">  Delete  </span> </button> </a> </td> 
+                    <td class="text-center" width="150px"> <a href="{{ url_for('downloadfile',keyname=f['filename']) }}"> <button class="btn btn-primary center-block">  Download  </span> </button> </a> </td>
+                    <td class="text-center" width="150px"> <a href="{{ url_for('deletefile',keyname=f['filename']) }}"> <button class="btn btn-primary center-block">  Delete  </span> </button> </a> </td> 
              </tr>
                 {% set count = count + 1 %}
               {% endfor %}

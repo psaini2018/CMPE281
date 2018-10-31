@@ -228,7 +228,7 @@ def downloadfile():
     key_name=request.args['keyname']
     s3 = boto3.client("s3",aws_access_key_id=AWS_ACCESS_KEY_ID,aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
     file = s3.get_object(Bucket=BUCKET_NAME, Key=key_name)
-
+    print file
     return Response(file['Body'].read(),headers = {"Content-Disposition": "attachment; filename=%s" % file})
 
 @application.route('/deletefile')

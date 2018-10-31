@@ -13,6 +13,9 @@ EDOCManager can manage your documents anywhere and anytime in the world. We mana
 ### S3 Bucket Policies Architecture
 ![Alt text](templates/awsarc2.png?raw=true "S3 Bucket Policies Architecture")
 
+### Application Flow 
+![Alt text](templates/appflow.png?raw=true "Application Flow")
+
 ### EDOCManager Features
 1. User can create their account in EDOCManager and passwords are encrypted and securely stored in AWS DynamoDB. AWS DynamoDB provides HA in 3 AWS AZs.
 2. Users can access their data only on overy SSL layers
@@ -65,7 +68,7 @@ EDOCManager can manage your documents anywhere and anytime in the world. We mana
 ![Alt text](templates/loginpage.png?raw=true "Login Page Screen")
 
 #### Users Home Page
-![Alt text](templates/loginpage.png?raw=true "User Home Page Screen")
+![Alt text](templates/homepage.png?raw=true "User Home Page Screen")
 
 #### DownloadFile
-![Alt text](templates/loginpage.png?raw=true "Download Page Screen")
+![Alt text](templates/download.png?raw=true "Download Page Screen")
