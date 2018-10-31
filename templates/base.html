@@ -65,9 +65,13 @@
        {% if session['username'] %}
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> {{ session['username'] }}</a></li>
         <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-in"></span>Log Out</a> 
+       {% elif session['access_token'] %}
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> {{ session['screen_name'] }}</a></li>
+        <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-in"></span>Log Out</a>
        {% else %}
         <li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
         <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="{{ url_for('twitterlogin') }}"><span class="glyphicon glyphicon-log-in"></span> Login using Twitter</a></li>
        {% endif %}
       </ul>
     </div>
