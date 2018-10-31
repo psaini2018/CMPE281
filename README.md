@@ -1,8 +1,11 @@
 # Introduction
-Project1 : EDOCManager
-University Name : http://www.sjsu.edu/
-Course : Cloud Technologies
-Professor : Sanjay Garje
+* Project1 : EDOCManager
+
+* University Name : http://www.sjsu.edu/
+
+* Course : Cloud Technologies
+
+* Professor : Sanjay Garje
 
 # EDOCManager : Manage your documents
 EDOCManager can manage your documents anywhere and anytime in the world. We manage your documents with higly secured technologies. We neet availabilit of 99.99% for your documents. EDOCManager deployed on AWS and using thier highly secure technologies to meet the security requirement for customer documents. For availability, EDOCManager is using S3 cross region replication and documents can be accesed for 2 years. However, this policy can be chaged based on customer requirement. EDOCManager provides fast access to your documents and allows you to upload/download/delete and update your document within no time. The application uses AWS SNS , cloudwatch and lambda to monitor the activities on your document. App health is being monitored using SNS and cloudwatch. AWS lambda function create log if there is any file upload by a user to keep a track of put activities. To meet the load requirements, we are using AWS autoscale functionality to double the capacity if load increases without any downtime. It can be further increased based on requirements. 
