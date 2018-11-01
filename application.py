@@ -146,8 +146,6 @@ def register():
 def login():
     if 'username' in session:
         return render_template('index.html')
-    elif  'access_token' in session:
-        return render_template('index.html')
     else:
         form = LoginForm()
         error=None
